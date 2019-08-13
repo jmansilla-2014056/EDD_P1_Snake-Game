@@ -51,3 +51,27 @@ class DoublyLinkedList:
             self.start_node = None
             return
         self.start_node = self.start_node.nref
+
+    def delete_at_end(self):
+        if self.start_node is None:
+            print("The list has no element to delete")
+            return
+        if self.start_node.nref is None:
+            self.start_node = None
+            return
+        n = self.start_node
+        while n.nref is not None:
+            n = n.nref
+        n.pref.nref = None
+
+    def count(self):
+        x = 0
+        if self.start_node is None:
+            print("List has no element")
+            return
+        else:
+            n = self.start_node
+            while n is not None:
+                x=+1
+                n = n.nref
+        return x

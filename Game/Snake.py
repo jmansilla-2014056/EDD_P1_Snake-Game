@@ -6,25 +6,35 @@ from curses import textpad
 from Game.Doublylinkedlist import DoublyLinkedList, Node
 
 
-def create_food(snake, box):
+def create_food(dl, box):
     """Simple function to find coordinates of food which is inside box and not on snake body"""
     food = None
     while food is None:
         food = [random.randint(box[0][0] + 1, box[1][0] - 1),
                 random.randint(box[0][1] + 1, box[1][1] - 1)]
-        if food in snake:
-            food = None
+
+        n = dl.start_node
+        while n is not None:
+            if food == n.item:
+                food = None
+                break
+            n = n.nref
+
     return food
 
 
-def create_poison(snake, box):
+def create_poison(dl, box):
     """Simple function to find coordinates of food which is inside box and not on snake body"""
     poison = None
     while poison is None:
         poison = [random.randint(box[0][0] + 1, box[1][0] - 1),
                   random.randint(box[0][1] + 1, box[1][1] - 1)]
-        if poison in snake:
-            poison = None
+        n = dl.start_node
+        while n is not None:
+            if poison == n.item:
+                poison = None
+                break
+            n = n.nref
     return poison
 
 
@@ -48,26 +58,21 @@ def gamer(stdscr):
     linked_list.insert_at_start([sh // 2, sw // 2 - 1])
 
     # create snake and set initial direction
-    snake = [[sh // 2, sw // 2 + 1], [sh // 2, sw // 2], [sh // 2, sw // 2 - 1]]
-    direction = curses.KEY_RIGHT
+    direction = curses.KEY_LEFT
 
     # draw snake
-    for y, x in snake:
-        stdscr.addstr(y, x, '#')
+    # for y, x in snake:
+    #    stdscr.addstr(y, x, '#')
 
     n = linked_list.start_node
-    f = 10
-    g = 10
     while n is not None:
-        stdscr.addstr(n.item[0], n.item[1], str(n.item))
-        f = f + 3
-        g = g + 3
+        stdscr.addstr(n.item[0], n.item[1], '#')
         n = n.nref
 
     # create food
-    food = create_food(snake, box)
+    food = create_food(linked_list, box)
     stdscr.addstr(food[0], food[1], '+')
-    poison = create_poison(snake, box)
+    poison = create_poison(linked_list, box)
     stdscr.addstr(poison[0], poison[1], '*')
 
     # print score
@@ -84,7 +89,12 @@ def gamer(stdscr):
             direction = key
 
         # find next position of snake head
-        head = snake[0]
+        snake = []
+        n = linked_list.start_node
+        while n is not None:
+            snake.insert(len(snake), n.item)
+            n = n.nref
+        head = linked_list.start_node.item
         if direction == curses.KEY_RIGHT:
             new_head = [head[0], head[1] + 1]
         elif direction == curses.KEY_LEFT:
@@ -98,12 +108,12 @@ def gamer(stdscr):
 
         # insert and print new head time.sleep(0.5)
         stdscr.addstr(new_head[0], new_head[1], '#')
+        # snake.insert(0, new_head)
+        linked_list.insert_at_start(new_head)
         snake.insert(0, new_head)
 
-        # remove head in this coordinates
-
         # if sanke head is on food
-        if snake[0] == food:
+        if linked_list.start_node.item == food:
 
             # update score
             score += 1
@@ -111,12 +121,12 @@ def gamer(stdscr):
             stdscr.addstr(1, sw // 2 - len(score_text) // 2, score_text)
 
             # create new food
-            food = create_food(snake, box)
+            food = create_food(linked_list, box)
             stdscr.addstr(food[0], food[1], '+')
 
             # increase speed of game
             stdscr.timeout(100 - (len(snake) // 3) % 90)
-        elif snake[0] == poison:
+        elif linked_list.start_node.item == poison:
             # update score
             score -= 1
             score_text = "Score: {}".format(score)
@@ -126,23 +136,30 @@ def gamer(stdscr):
 
             stdscr.addstr(temp[0], temp[1], '/')
             snake.pop(len(snake) - 1)
+            linked_list.delete_at_end()
 
             # create new poison
-            poison = create_poison(snake, box)
+            poison = create_poison(linked_list, box)
             stdscr.addstr(poison[0], poison[1], '*')
 
             # increase speed of game
             stdscr.timeout(100 - (len(snake) // 3) % 90)
             stdscr.addstr(snake[-1][0], snake[-1][1], ' ')
             snake.pop()
+            linked_list.delete_at_end()
             stdscr.refresh()
 
         else:
             # shift snake's tail
             stdscr.addstr(snake[-1][0], snake[-1][1], ' ')
             snake.pop()
+            linked_list.delete_at_end()
 
         # conditions for game over
+
+        if poison == food:
+            create_poison(linked_list, box)
+
         if (snake[0][0] in [box[0][0], box[1][0]] or
                 snake[0][1] in [box[0][1], box[1][1]] or
                 snake[0] in snake[1:]):

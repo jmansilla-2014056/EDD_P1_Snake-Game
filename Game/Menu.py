@@ -54,7 +54,6 @@ def main(stdscr):
             stdscr.getch()
             if current_row == 1:
                 Snake.gamer(stdscr)
-
             # if user selected last row, exit the program
             if current_row == len(menu)-1:
                 break
