@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dba4b762-c587-4000-b26e-57246a9775c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Game/ReportSnake.py" afterDir="false" />
+    <list default="true" id="dba4b762-c587-4000-b26e-57246a9775c5" name="Default Changelist" comment="Commit">
+      <change afterPath="$PROJECT_DIR$/Game/Bulk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/CircularDoublyLinkedList.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/Doublylinkedlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Doublylinkedlist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/ReportSnake.py" beforeDir="false" afterPath="$PROJECT_DIR$/Game/ReportSnake.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/Snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Snake.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/snake.gv" beforeDir="false" afterPath="$PROJECT_DIR$/Game/snake.gv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/snake.gv.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Game/snake.gv.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/stack.gv" beforeDir="false" afterPath="$PROJECT_DIR$/Game/stack.gv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/stack.gv.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Game/stack.gv.pdf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +41,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Roaming/GitPortable/bin/git.exe" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -56,6 +64,27 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.Menu">
+    <configuration name="Bulk" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Practica1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Game" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Game/Bulk.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Menu" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Practica1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -145,10 +174,12 @@
       <item itemvalue="Python.Menu" />
       <item itemvalue="Python.Snake (1)" />
       <item itemvalue="Python.othertest" />
+      <item itemvalue="Python.Bulk" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Menu" />
+        <item itemvalue="Python.Bulk" />
         <item itemvalue="Python.othertest" />
         <item itemvalue="Python.Snake (1)" />
         <item itemvalue="Python.Snake" />

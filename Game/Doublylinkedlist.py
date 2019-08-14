@@ -1,7 +1,7 @@
 class Node:
     def __init__(self, data):
         self.item = data
-        self.nref = None
+        self.prev = None
         self.pref = None
 
     def get_data(self):
@@ -27,7 +27,7 @@ class DoublyLinkedList:
             print("node inserted")
             return
         new_node = Node(data)
-        new_node.nref = self.start_node
+        new_node.prev = self.start_node
         self.start_node.pref = new_node
         self.start_node = new_node
 
@@ -37,32 +37,32 @@ class DoublyLinkedList:
             self.start_node = new_node
             return
         n = self.start_node
-        while n.nref is not None:
-            n = n.nref
+        while n.prev is not None:
+            n = n.prev
         new_node = Node(data)
-        n.nref = new_node
+        n.prev = new_node
         new_node.pref = n
 
     def delete_at_start(self):
         if self.start_node is None:
             print("The list has no element to delete")
             return
-        if self.start_node.nref is None:
+        if self.start_node.prev is None:
             self.start_node = None
             return
-        self.start_node = self.start_node.nref
+        self.start_node = self.start_node.prev
 
     def delete_at_end(self):
         if self.start_node is None:
             print("The list has no element to delete")
             return
-        if self.start_node.nref is None:
+        if self.start_node.prev is None:
             self.start_node = None
             return
         n = self.start_node
-        while n.nref is not None:
-            n = n.nref
-        n.pref.nref = None
+        while n.prev is not None:
+            n = n.prev
+        n.pref.prev = None
 
     def count(self):
         x = 0
@@ -73,5 +73,5 @@ class DoublyLinkedList:
             n = self.start_node
             while n is not None:
                 x += 1
-                n = n.nref
+                n = n.prev
         return x

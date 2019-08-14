@@ -20,7 +20,7 @@ def create_food(dl, box):
             if food == n.item:
                 food = None
                 break
-            n = n.nref
+            n = n.prev
 
     return food
 
@@ -36,7 +36,7 @@ def create_poison(dl, box):
             if poison == n.item:
                 poison = None
                 break
-            n = n.nref
+            n = n.prev
     return poison
 
 
@@ -71,7 +71,7 @@ def gamer(stdscr):
     n = linked_list.start_node
     while n is not None:
         stdscr.addstr(n.item[0], n.item[1], '#')
-        n = n.nref
+        n = n.prev
 
     # create food
     food = create_food(linked_list, box)
@@ -85,7 +85,7 @@ def gamer(stdscr):
     score_text = "Score: {}".format(score)
     stdscr.addstr(1, sw // 2 - len(score_text) // 2, score_text)
     level_text = "Level: {}".format(level)
-    stdscr.addstr(2, sw//2 - len(level_text)//2, level_text)
+    stdscr.addstr(2, sw // 2 - len(level_text) // 2, level_text)
 
     while 1:
         # non-blocking input
@@ -100,7 +100,7 @@ def gamer(stdscr):
         n = linked_list.start_node
         while n is not None:
             snake.insert(len(snake), n.item)
-            n = n.nref
+            n = n.prev
         head = linked_list.start_node.item
         if direction == curses.KEY_RIGHT:
             new_head = [head[0], head[1] + 1]
@@ -110,11 +110,10 @@ def gamer(stdscr):
             time.sleep((0.1 / level))
         elif direction == curses.KEY_DOWN:
             new_head = [head[0] + 1, head[1]]
-            time.sleep(2/(level*8))
+            time.sleep(2 / (level * 8))
         elif direction == curses.KEY_UP:
             new_head = [head[0] - 1, head[1]]
-            time.sleep(2/(level*9))
-
+            time.sleep(2 / (level * 9))
 
         # insert and print new head time.sleep(0.5)
         stdscr.addstr(new_head[0], new_head[1], '#')
@@ -135,12 +134,12 @@ def gamer(stdscr):
             stdscr.addstr(food[0], food[1], '+')
 
             # increase speed of game
-            level = 1 + int(score/15)
+            level = 1 + int(score / 15)
             level_text = "Level: {}".format(level)
             stdscr.addstr(2, sw // 2 - len(level_text) // 2, level_text)
             curses.curs_set(0)
             stdscr.nodelay(1)
-            #stdscr.timeout(100 - level*25)
+            # stdscr.timeout(100 - level*25)
         elif linked_list.start_node.item == poison:
             # update score
             score -= 1
@@ -163,7 +162,7 @@ def gamer(stdscr):
             stdscr.addstr(2, sw // 2 - len(level_text) // 2, level_text)
             curses.curs_set(0)
             stdscr.nodelay(1)
-            #stdscr.timeout(100 - level * 25)
+            # stdscr.timeout(100 - level * 25)
             stdscr.addstr(snake[-1][0], snake[-1][1], ' ')
             snake.pop()
             stack.pop()
