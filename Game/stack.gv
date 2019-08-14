@@ -1,0 +1,4 @@
+digraph structs {
+	node [shape=record]
+	stack [label="{[10, 14]|[16, 25]|[14, 13]|None}"]
+}

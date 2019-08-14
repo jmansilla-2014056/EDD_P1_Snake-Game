@@ -1,0 +1,21 @@
+digraph structs {
+	node [shape=record]
+	<Game.Doublylinkedlist.Node object at 0x039585B0> [label=" |[13, 42]|"]
+	<Game.Doublylinkedlist.Node object at 0x03958350> [label=" |[13, 41]|"]
+	<Game.Doublylinkedlist.Node object at 0x03958430> [label=" |[13, 40]|"]
+	<Game.Doublylinkedlist.Node object at 0x03958410> [label=" |[13, 39]|"]
+	<Game.Doublylinkedlist.Node object at 0x037F6710> [label=" |[13, 38]|"]
+	<Game.Doublylinkedlist.Node object at 0x039325D0> [label=" |[13, 37]|"]
+	<Game.Doublylinkedlist.Node object at 0x039585B0> -> <Game.Doublylinkedlist.Node object at 0x03958350>
+	<Game.Doublylinkedlist.Node object at 0x03958350> -> <Game.Doublylinkedlist.Node object at 0x03958430>
+	<Game.Doublylinkedlist.Node object at 0x03958430> -> <Game.Doublylinkedlist.Node object at 0x03958410>
+	<Game.Doublylinkedlist.Node object at 0x03958410> -> <Game.Doublylinkedlist.Node object at 0x037F6710>
+	<Game.Doublylinkedlist.Node object at 0x037F6710> -> <Game.Doublylinkedlist.Node object at 0x039325D0>
+	<Game.Doublylinkedlist.Node object at 0x039325D0> -> None
+	<Game.Doublylinkedlist.Node object at 0x03958350> -> <Game.Doublylinkedlist.Node object at 0x039585B0>
+	<Game.Doublylinkedlist.Node object at 0x03958430> -> <Game.Doublylinkedlist.Node object at 0x03958350>
+	<Game.Doublylinkedlist.Node object at 0x03958410> -> <Game.Doublylinkedlist.Node object at 0x03958430>
+	<Game.Doublylinkedlist.Node object at 0x037F6710> -> <Game.Doublylinkedlist.Node object at 0x03958410>
+	<Game.Doublylinkedlist.Node object at 0x039325D0> -> <Game.Doublylinkedlist.Node object at 0x037F6710>
+	None -> <Game.Doublylinkedlist.Node object at 0x039325D0>
+}

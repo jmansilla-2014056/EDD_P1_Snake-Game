@@ -72,6 +72,6 @@ class DoublyLinkedList:
         else:
             n = self.start_node
             while n is not None:
-                x=+1
+                x += 1
                 n = n.nref
         return x
