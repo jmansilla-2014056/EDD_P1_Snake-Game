@@ -1,0 +1,8 @@
+digraph structs {
+	node [shape=record]
+	rankdir=LR
+	<Game.LinkedList.node object at 0x0334DA30> [label="{['Julio', 10]|}"]
+	<Game.LinkedList.node object at 0x0334DBB0> [label="{['Yisus', 8]|}"]
+	<Game.LinkedList.node object at 0x0334DA30> -> <Game.LinkedList.node object at 0x0334DBB0>
+	<Game.LinkedList.node object at 0x0334DBB0> -> None
+}
