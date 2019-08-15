@@ -1,25 +1,28 @@
 digraph structs {
 	node [shape=record]
 	rankdir=LR
-	<Game.Doublylinkedlist.Node object at 0x03161950> [label="{|Fermin|}"]
-	<Game.Doublylinkedlist.Node object at 0x03161930> [label="{|Memo|}"]
-	<Game.Doublylinkedlist.Node object at 0x03161910> [label="{|Julio|}"]
-	<Game.Doublylinkedlist.Node object at 0x031618F0> [label="{|Jose|}"]
-	<Game.Doublylinkedlist.Node object at 0x031618D0> [label="{|Fermin|}"]
-	<Game.Doublylinkedlist.Node object at 0x031618B0> [label="{|Eli|}"]
-	<Game.Doublylinkedlist.Node object at 0x03161970> [label="{|Maria|}"]
-	<Game.Doublylinkedlist.Node object at 0x03161950> -> <Game.Doublylinkedlist.Node object at 0x03161930>
-	<Game.Doublylinkedlist.Node object at 0x03161950> -> <Game.Doublylinkedlist.Node object at 0x03161970>
-	<Game.Doublylinkedlist.Node object at 0x03161930> -> <Game.Doublylinkedlist.Node object at 0x03161910>
-	<Game.Doublylinkedlist.Node object at 0x03161930> -> <Game.Doublylinkedlist.Node object at 0x03161950>
-	<Game.Doublylinkedlist.Node object at 0x03161910> -> <Game.Doublylinkedlist.Node object at 0x031618F0>
-	<Game.Doublylinkedlist.Node object at 0x03161910> -> <Game.Doublylinkedlist.Node object at 0x03161930>
-	<Game.Doublylinkedlist.Node object at 0x031618F0> -> <Game.Doublylinkedlist.Node object at 0x031618D0>
-	<Game.Doublylinkedlist.Node object at 0x031618F0> -> <Game.Doublylinkedlist.Node object at 0x03161910>
-	<Game.Doublylinkedlist.Node object at 0x031618D0> -> <Game.Doublylinkedlist.Node object at 0x031618B0>
-	<Game.Doublylinkedlist.Node object at 0x031618D0> -> <Game.Doublylinkedlist.Node object at 0x031618F0>
-	<Game.Doublylinkedlist.Node object at 0x031618B0> -> <Game.Doublylinkedlist.Node object at 0x03161970>
-	<Game.Doublylinkedlist.Node object at 0x031618B0> -> <Game.Doublylinkedlist.Node object at 0x031618D0>
-	<Game.Doublylinkedlist.Node object at 0x03161970> -> <Game.Doublylinkedlist.Node object at 0x03161950>
-	<Game.Doublylinkedlist.Node object at 0x03161970> -> <Game.Doublylinkedlist.Node object at 0x031618B0>
+	<Game.Doublylinkedlist.Node object at 0x0334DEB0> [label="{|Maria|}"]
+	<Game.Doublylinkedlist.Node object at 0x0334DE90> [label="{|Fermin|}"]
+	<Game.Doublylinkedlist.Node object at 0x0334DE70> [label="{|Memo|}"]
+	<Game.Doublylinkedlist.Node object at 0x0334DE50> [label="{|Julio|}"]
+	<Game.Doublylinkedlist.Node object at 0x0334DE30> [label="{|Jose|}"]
+	<Game.Doublylinkedlist.Node object at 0x0334DE10> [label="{|Fermin|}"]
+	<Game.Doublylinkedlist.Node object at 0x0334DDF0> [label="{|Eli|}"]
+	<Game.Doublylinkedlist.Node object at 0x0330C350> [label="{|Yisus|}"]
+	<Game.Doublylinkedlist.Node object at 0x0334DEB0> -> <Game.Doublylinkedlist.Node object at 0x0334DE90>
+	<Game.Doublylinkedlist.Node object at 0x0334DEB0> -> <Game.Doublylinkedlist.Node object at 0x0330C350>
+	<Game.Doublylinkedlist.Node object at 0x0334DE90> -> <Game.Doublylinkedlist.Node object at 0x0334DE70>
+	<Game.Doublylinkedlist.Node object at 0x0334DE90> -> <Game.Doublylinkedlist.Node object at 0x0334DEB0>
+	<Game.Doublylinkedlist.Node object at 0x0334DE70> -> <Game.Doublylinkedlist.Node object at 0x0334DE50>
+	<Game.Doublylinkedlist.Node object at 0x0334DE70> -> <Game.Doublylinkedlist.Node object at 0x0334DE90>
+	<Game.Doublylinkedlist.Node object at 0x0334DE50> -> <Game.Doublylinkedlist.Node object at 0x0334DE30>
+	<Game.Doublylinkedlist.Node object at 0x0334DE50> -> <Game.Doublylinkedlist.Node object at 0x0334DE70>
+	<Game.Doublylinkedlist.Node object at 0x0334DE30> -> <Game.Doublylinkedlist.Node object at 0x0334DE10>
+	<Game.Doublylinkedlist.Node object at 0x0334DE30> -> <Game.Doublylinkedlist.Node object at 0x0334DE50>
+	<Game.Doublylinkedlist.Node object at 0x0334DE10> -> <Game.Doublylinkedlist.Node object at 0x0334DDF0>
+	<Game.Doublylinkedlist.Node object at 0x0334DE10> -> <Game.Doublylinkedlist.Node object at 0x0334DE30>
+	<Game.Doublylinkedlist.Node object at 0x0334DDF0> -> <Game.Doublylinkedlist.Node object at 0x0330C350>
+	<Game.Doublylinkedlist.Node object at 0x0334DDF0> -> <Game.Doublylinkedlist.Node object at 0x0334DE10>
+	<Game.Doublylinkedlist.Node object at 0x0330C350> -> <Game.Doublylinkedlist.Node object at 0x0334DEB0>
+	<Game.Doublylinkedlist.Node object at 0x0330C350> -> <Game.Doublylinkedlist.Node object at 0x0334DDF0>
 }

@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dba4b762-c587-4000-b26e-57246a9775c5" name="Default Changelist" comment="Commit">
-      <change afterPath="$PROJECT_DIR$/Game/Bulk.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game/CircularDoublyLinkedList.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/LinkedList.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Doublylinkedlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Doublylinkedlist.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Menu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/ReportSnake.py" beforeDir="false" afterPath="$PROJECT_DIR$/Game/ReportSnake.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/Snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Snake.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/circular.gv" beforeDir="false" afterPath="$PROJECT_DIR$/Game/circular.gv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/circular.gv.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Game/circular.gv.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/snake.gv" beforeDir="false" afterPath="$PROJECT_DIR$/Game/snake.gv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/snake.gv.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Game/snake.gv.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/stack.gv" beforeDir="false" afterPath="$PROJECT_DIR$/Game/stack.gv" afterDir="false" />

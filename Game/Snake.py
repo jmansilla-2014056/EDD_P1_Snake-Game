@@ -187,9 +187,9 @@ def gamer(stdscr):
             msg = "Game Over!" + str(linked_list.count())
 
             stdscr.addstr(sh // 2, sw // 2 - len(msg) // 2, msg)
-            rs = ReportSnake
-            rs.graphstack(stack)
-            rs.graphdoubly(linked_list)
+            # rs = ReportSnake
+            # rs.graphstack(stack)
+            # rs.graphdoubly(linked_list)
             while 1:
                 key = stdscr.getch()
                 if key == curses.KEY_ENTER or key in [10, 13]:
@@ -198,7 +198,7 @@ def gamer(stdscr):
             stdscr.nodelay(0)
             stdscr.getch()
             break
-
+    return [score, stack, linked_list]
 
 class Snake:
     pass
